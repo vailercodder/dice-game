@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <div class="player-1">
+      <div>
+        <p class="players-font-size">PLAYER 1</p>
+        <p class="score" id="player-1-score">0</p>
+      </div>
+      <h1 id="player-1-you-won">You Won</h1>
+      <img
+        id="player-1-win-gif"
+        class="hidden"
+        src="/images/12f6accc21f3cad0047fc68fc282569c.gif"
+        alt="Player 1 Wins!"
+      />
+      <div class="current-score">
+        <p>CURRENT SCORE</p>
+        <p id="player-1-total-score">0</p>
+      </div>
+    </div>
+    <div class="player-2">
+      <div>
+        <p class="players-font-size">PLAYER 2</p>
+        <p class="score" id="player-2-score">0</p>
+      </div>
+      <h1 id="player-2-you-won">You Won</h1>
+      <img
+        id="player-2-win-gif"
+        class="hidden"
+        src="/images/12f6accc21f3cad0047fc68fc282569c.gif"
+        alt="Player 2 Wins!"
+      />
+      <div class="current-score">
+        <p>CURRENT SCORE</p>
+        <p id="player-2-total-score">0</p>
+      </div>
+    </div>
+    <div class="middle-layer">
+      <button onclick="refreshPage()" class="new-game" id="specialButton">
+        NEW GAME
+      </button>
+      <div class="dice-position">
+        <div class="container">
+          <div id="slider">
+            <img id="picture1" src="images/dice-1.png" class="active" />
+          </div>
+        </div>
+        <div class="container">
+          <div id="slider">
+            <img id="picture2" src="images/dice-1.png" class="active" />
+          </div>
+        </div>
+      </div>
+      <div class="rool-dice-hold-buttons">
+        <button id="changeDice">ROLL DICE</button>
+      </div>
+    </div>
+    <div id="input-container">
+      <h1>Game Instructions:</h1>
+      <ol>
+        <li>dice rolls automatically</li>
+        <li>first one to reach the target points, wins</li>
+        good luck, i guess
+      </ol>
+      <h2>Please select a target score</h2>
+      <input
+        type="number"
+        id="number-input"
+        placeholder="Enter a Target score"
+      />
+      <button id="submit-button">Submit</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
